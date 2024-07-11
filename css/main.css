@@ -1,0 +1,547 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,700,800);
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  text-decoration: underline;
+  color: #81b4bd;
+}
+
+.desktop-onle {
+  display: block;
+}
+
+.sticky-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container.container-small {
+  width: 1000px;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+/* header */
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0;
+}
+
+.header-bg {
+  background-color: #f6f6f6;
+}
+
+.header-white-bg {
+  background-color: #fff !important;
+}
+
+/* nav */
+.logo {
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* .nav-list li {
+} */
+
+.nav-list a {
+  color: #000;
+  transition: color 0.2s ease-in;
+}
+
+.nav-list a.active {
+  color: #81b4bd;
+}
+
+.nav-list a:hover {
+  color: #00ceb5;
+}
+.btn-mobile-nav {
+  display: none;
+}
+
+/* mobile-nav */
+.mobile-nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav-list a {
+  color: #000;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* main-page none */
+.none {
+  display: none !important; /* Ничего не показывать! */
+}
+
+.title-1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.title-1 span {
+  color: #81b4bd;
+}
+
+.title-2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.title-3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* header promo */
+.promo {
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+  height: 500px;
+  background-color: #394d42;
+  background-image: url(./../img/promo/promo-bg.png);
+  background-position: center;
+  background-size: cover; /*покрывает*/
+  border-radius: 40px;
+  color: #fff;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .promo {
+    background-image: url("./../img/promo/promo-bg@2x.png");
+  }
+}
+
+/* page */
+/* .promo-desc {} */
+
+.promo-title {
+  font-weight: 800;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.promo-texs {
+  font-size: 24px;
+}
+
+/* main content */
+.main-content {
+  padding: 90px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.content-row.content-row-revers {
+  flex-direction: row-reverse;
+}
+
+.content-img {
+  flex-shrink: 0; /*гибкое сжатие*/
+  overflow: hidden; /* содержимое не помещается в поле родительского элемента (переполняется) в горизонтальном и/или вертикальном направлении.overflow */
+  border-radius: 40px;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column; /*устанавливает направление в ряд или в колонку.*/
+  row-gap: 20px; /*задаёт отступы между колонками и рядами. Является сокращением для свойств row-gap и column-gap.*/
+  /* gap: 20px; */
+}
+
+.content-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  /* padding: 20px 0;  */
+}
+
+.content-text a {
+  text-decoration: underline; /* подчёркивание*/
+  color: #81b4bd;
+}
+
+/* inner-page */
+.inner-page {
+  padding: 90px 0;
+}
+
+.inner-page-title-wrapper {
+  margin-bottom: 60px;
+}
+
+/* cards */
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 30px;
+  row-gap: 60px; */
+  gap: 60px 30px;
+}
+
+.card {
+  width: 370px;
+  /* background-color: #d9d9d9; */
+}
+
+.card-img {
+  display: block;
+  margin-bottom: 20px;
+  overflow: hidden; /*переполнение*/
+  border-radius: 20px;
+}
+
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.card-desc p {
+  line-height: 1.5;
+}
+
+.card-desc a {
+  text-decoration: underline;
+  color: #81b4bd;
+}
+
+/* article */
+/* .article-container {
+} */
+
+.article-container p + p {
+  margin-top: 30px;
+}
+
+.article-img {
+  margin: 40px 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.article-container p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* contacts page */
+.contacts-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+/* form */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px;
+  width: 600px;
+
+  border-radius: 10px;
+  box-shadow: 0px 5px 25px 0px rgba(211, 211, 211, 0.5);
+  background: #fff;
+}
+
+.from-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 20px;
+
+  height: 50px;
+  border: 1px solid rgb(181, 222, 229);
+  border-radius: 2px;
+  background: rgb(239, 249, 251);
+  color: rgb(54, 114, 125);
+}
+
+.input::placeholder {
+  color: rgb(163, 201, 220);
+}
+
+.input.input-50 {
+  flex: 1;
+}
+
+.radio-list,
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.radio-list label,
+.checkbox-list label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.radio-list label input,
+.checkbox-list label input {
+  flex-shrink: 0;
+}
+
+.submit-btn {
+  align-self: flex-start; /*выровнять-самостоятельно*/
+  padding: 12px 36px;
+  border-radius: 6px;
+  height: 50px;
+
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+
+  box-shadow: 0 8px 20px 0 rgba(129, 180, 189, 0.35);
+  background: #81b4bd;
+  color: #fff;
+  transition: all 0.2ms ease-in;
+}
+
+.submit-btn:hover {
+  opacity: 0.8; /* устанавливает непрозрачность элемента*/
+}
+
+.submit-btn:active {
+  opacity: 1;
+  background: #537980;
+}
+
+/* custom radio bottom */
+/* .real-radio {
+} */
+
+.faek-radio {
+  flex-shrink: 0;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 20px;
+  border: 1px solid rgb(181, 222, 229);
+  background: rgb(239, 249, 251);
+}
+
+.real-radio:checked + .faek-radio::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(55, 182, 204);
+}
+
+.faek-radio::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: rgb(55, 182, 204);
+  transition: all 0.2ms ease-in;
+}
+
+.real-radio:checked + .faek-radio::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* custom checkboxes */
+/* .real-checkbox {
+} */
+
+.fake-checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  border: 1px solid #b5dee5;
+  background: #eff9fb;
+}
+
+.fake-checkbox::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2ms ease-in;
+
+  width: 16px;
+  height: 13px;
+  background-image: url("./../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.real-checkbox:checked + .fake-checkbox::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* address */
+.address-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.address-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* footer */
+.footer {
+  margin-top: auto;
+  background-color: #111111;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-coperight {
+  font-size: 14px;
+  line-height: 1.8;
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
+.footer-contacts {
+  text-align: right;
+}
+
+.footer-phone {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.footer-email {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #00bda6;
+}
+
+.footer-address {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+}
